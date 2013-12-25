@@ -98,7 +98,7 @@ identify3d(P, O, C, labels = names, n = length(names), plot = TRUE, tolerance = 
 #Add CPC Allocation for POC Segmentation Targeting
 open3d()
 plot3d(P, O, C, col=hsv(1,hue,.8)#col=heat.colors(c(data[,"Rec_CPC"]))
-	, size=c(data[,"Rec_CPC"]/3.5), type="s", nticks = 1
+	, size=c(data[,"CPC"]/3.5), type="s", nticks = 1
 	, lwd=2, box=TRUE, axes=TRUE, main="POC Segmentation"
 	,xlab="P_Purchase_Rate", ylab="O_Order_Frequency", zlab="C_CPA")
 axes3d(edges = "bbox", col="black", lwd=2, labels = TRUE, tick = TRUE, nticks = 10, box=TRUE)
@@ -126,7 +126,7 @@ open3d()
 hue <- c(data[,"POC_Score"])/max(c(data[,"POC_Score"]))
 (1,1,1)
 plot3d(P, O, C, col=hsv(.65+.35*hue,hue,1)#col=?heat.map(c(data[,"POC_Score"]))
-	, size=c(data[,"Rec_CPC"]/3.5), type="s", nticks = 1
+	, size=c(data[,"CPC"]/3.5), type="s", nticks = 1
 	, lwd=2, box=TRUE, axes=TRUE, main="POC Segmentation"
 	,xlab="P_Purchase_Rate", ylab="O_Order_Frequency", zlab="C_CPA")
 axes3d(edges = "bbox", col="orange", lwd=3, labels = TRUE, tick = TRUE, nticks = 10, box=TRUE)
