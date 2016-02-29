@@ -22,7 +22,7 @@ getwd()
 source(paste(c(myfolder,"library.forecast.txt"),collapse="")) #Get library
 
 #Create SQL Query
-query <- #Enter SQL Qeury Here
+query <- #Enter SQL Query Here
 
 #Establish Connection
 library(RODBC)
